@@ -63,9 +63,9 @@ namespace Basic3D
                 Exit();
 
             // TODO: Add your update logic here
-            if (KBState.IsKeyDown(Keys.Left))
+            if (KBState.IsKeyDown(Keys.A))
                 m_View *= Matrix.CreateTranslation(0.01f, 0, 0);
-            if (KBState.IsKeyDown(Keys.Right))
+            if (KBState.IsKeyDown(Keys.D))
                 m_View *= Matrix.CreateTranslation(-0.01f, 0, 0);
             if (KBState.IsKeyDown(Keys.Up))
                 m_View *= Matrix.CreateTranslation(0, 0, 0.01f);
@@ -75,9 +75,9 @@ namespace Basic3D
                 m_View *= Matrix.CreateTranslation(0, 0, 0.01f);
             if (KBState.IsKeyDown(Keys.OemMinus) || KBState.IsKeyDown(Keys.Subtract))
                 m_View *= Matrix.CreateTranslation(0, 0, -0.01f);
-            if (KBState.IsKeyDown(Keys.A))
+            if (KBState.IsKeyDown(Keys.Left))
                 m_View *= Matrix.CreateRotationY(-MathHelper.ToRadians(1));
-            if (KBState.IsKeyDown(Keys.D))
+            if (KBState.IsKeyDown(Keys.Right))
                 m_View *= Matrix.CreateRotationY(MathHelper.ToRadians(1));
             if (KBState.IsKeyDown(Keys.W))
                 m_View *= Matrix.CreateRotationX(-MathHelper.ToRadians(1));
